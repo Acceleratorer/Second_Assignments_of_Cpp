@@ -4,48 +4,31 @@ using namespace std;
 
 int main()
 {
-    float a,b,c,DTB;
+    float a, b, c, DTB;
     cin >> a >> b >> c;
-    DTB = (a+b+c)/3;
+    DTB = (a + b + c) / 3;
+
+    DTB = round(DTB * 100) / 100;
+
+    cout << fixed;
     cout.precision(2);
     
+    cout << "DTB = " << DTB << endl;
     
-    if (DTB >= 9 && DTB <= 10)
-    {
-        cout << "DTB = " << DTB << endl << endl;
-        cout << "Loai: XUAT SAC" << endl;
-    }
-    else if (DTB >= 8 && DTB < 9)
-    {
-        cout << "DTB = " << DTB << endl << endl;
-        cout << "Loai: GIOI" << endl;
-    }
-    else if (DTB >= 7 && DTB < 8)
-    {
-        cout << "DTB = " << DTB << endl << endl;
-        cout << "Loai: KHA" << endl;
-    }
-    else if (DTB >= 6 && DTB < 7)
-    {
-        cout << "DTB = " << DTB << endl << endl;
-        cout << "Loai: TB KHA" << endl;
-    }
-    else if (DTB >= 5 && DTB < 6)
-    {
-        cout << "DTB = " << DTB << endl << endl;
-        cout << "Loai: TB" << endl;
-    }
-    else if (DTB >= 4 && DTB < 5)
-    {
-        cout << "DTB: " << DTB << endl << endl;
-        cout << "Loai: YEU" << endl;
-    }
-    else if ( DTB < 4)
-    {
-        cout << "DTB = " << DTB << endl << endl;
-        cout << "Loai: KEM" << endl;
-    }
-    
-    
+    if (DTB >= 9)
+        cout << "Loai: XUAT SAC";
+    else if (DTB >= 8)
+        cout << "Loai: GIOI";
+    else if (DTB >= 7)
+        cout << "Loai: KHA";
+    else if (DTB >= 6)
+        cout << "Loai: TB KHA";
+    else if (DTB >= 5)
+        cout << "Loai: TB";
+    else if (DTB >= 4)
+        cout << "Loai: YEU";
+    else
+        cout << "Loai: KEM";
+
     return 0;
 }
